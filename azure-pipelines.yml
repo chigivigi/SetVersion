@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage:
+  vmImage:'ubuntu-latest'
 
 steps:
 - script: echo Hello, world!
@@ -21,8 +21,8 @@ steps:
   inputs:
     script: |
       git clone https://github.com/XXX/XXX.git
-      git config --global user.name "XXX"
+      git config --global user.name "jfadiga@nodefusion.com"
       git checkout master
       git add .
       git commit -m "abc"
-      git push https://{AzureDevopsPAT}@dev.azure.com/{org}/{pro}/_git/delete.git
+      git push https://{AzureDevopsPAT}@dev.azure.com/3pro-pilot1/SetVersionTest/_git/delete.git
