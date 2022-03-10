@@ -10,19 +10,12 @@ pool:
   vmImage:'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
 - task: CmdLine@2
   inputs:
     script: |
-      git clone https://github.com/XXX/XXX.git
+      git clone https://github.com/Nodefusion/SetVersion.git
       git config --global user.name "jfadiga@nodefusion.com"
       git checkout master
       git add .
       git commit -m "abc"
-      git push https://{AzureDevopsPAT}@dev.azure.com/3pro-pilot1/SetVersionTest/_git/delete.git
+      git push https://7dtiqfi6pclxs3ni3otvub7dzmcn32rhc4wo6w7v3tbhl6yab65q@dev.azure.com/3pro-pilot1/SetVersionTest/_git/delete.git
